@@ -14,6 +14,8 @@ yarn add f-array.splice
 
 ## Usage
 
+Mutable arrays:
+
 ```ts
 import { arrayInsertAt, arrayRemoveAt } from 'f-array.splice';
 
@@ -25,4 +27,18 @@ arrayInsertAt(mutableArray, 2, -1, -2);
 // Remove the item at index 1.
 arrayRemoveAt(mutableArray, 1);
 // mutableArray: 1, -1, -2, 3
+```
+
+Immutable arrays:
+
+```ts
+import { pureArrayInsertAt, pureArrayRemoveAt } from 'f-array.splice';
+
+// Returns a new array with [-1, -2] inserted at index 2.
+pureArrayInsertAt([1, 2, 3], 2, -1, -2);
+// 1, 2, -1, -2, 3
+
+// Returns a new array with an item removed at index 1.
+pureArrayRemoveAt([1, 2, 3], 1);
+// 1, 3
 ```
