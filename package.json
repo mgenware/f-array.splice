@@ -6,11 +6,11 @@
   "exports": "./dist/main.js",
   "types": "./dist/main.d.ts",
   "author": "Mgenware (https://github.com/mgenware)",
-  "homepage": "https://github.com/mgenware/__PKG_NAME__",
-  "bugs": "https://github.com/mgenware/__PKG_NAME__/issues",
+  "homepage": "https://github.com/mgenware/f-array.splice",
+  "bugs": "https://github.com/mgenware/f-array.splice/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mgenware/__PKG_NAME__"
+    "url": "https://github.com/mgenware/f-array.splice"
   },
   "license": "MIT",
   "scripts": {
