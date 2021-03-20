@@ -13,3 +13,7 @@ export function pureArrayInsertAt<T>(array: ReadonlyArray<T>, index: number, ...
 export function pureArrayRemoveAt<T>(array: ReadonlyArray<T>, index: number): T[] {
   return [...array.slice(0, index), ...array.slice(index + 1)];
 }
+
+export function pureArraySet<T>(array: T[], index: number, item: T): T[] {
+  return [...array.slice(0, index), item, ...array.slice(index + 1)];
+}

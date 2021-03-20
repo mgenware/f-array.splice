@@ -2,6 +2,7 @@ import * as assert from 'assert';
 import {
   arrayInsertAt,
   arrayRemoveAt,
+  pureArraySet,
   pureArrayInsertAt,
   pureArrayRemoveAt,
 } from '../dist/main.js';
@@ -59,4 +60,14 @@ it('pureArrayRemoveAt', () => {
 
   assert.deepStrictEqual(pureArrayRemoveAt([1, 2, 3], 1), [1, 3]);
   assert.deepStrictEqual(pureArrayRemoveAt([1], 0), []);
+});
+
+it('pureArraySet', () => {
+  const a = [1, 2, 3];
+  const b = pureArraySet(a, 1, -1);
+  assert.deepStrictEqual(a, [1, 2, 3]);
+  assert.deepStrictEqual(b, [1, -1, 3]);
+
+  assert.deepStrictEqual(pureArraySet([1, 2, 3], 1, -1), [1, -1, 3]);
+  assert.deepStrictEqual(pureArraySet([1, 2, 3], 0, -1), [-1, 2, 3]);
 });

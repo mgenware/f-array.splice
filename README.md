@@ -32,7 +32,7 @@ arrayRemoveAt(mutableArray, 1);
 Immutable arrays:
 
 ```ts
-import { pureArrayInsertAt, pureArrayRemoveAt } from 'f-array.splice';
+import { pureArrayInsertAt, pureArrayRemoveAt, pureArraySet } from 'f-array.splice';
 
 // Returns a new array with [-1, -2] inserted at index 2.
 pureArrayInsertAt([1, 2, 3], 2, -1, -2);
@@ -41,4 +41,8 @@ pureArrayInsertAt([1, 2, 3], 2, -1, -2);
 // Returns a new array with an item removed at index 1.
 pureArrayRemoveAt([1, 2, 3], 1);
 // 1, 3
+
+// Returns a new array with an item at index replaced with another item.
+pureArraySet([1, 2, 3], 1, -2);
+// 1, -2, 3
 ```
