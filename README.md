@@ -9,7 +9,7 @@ F\*\*\* the `array.splice`.
 ## Installation
 
 ```sh
-yarn add f-array.splice
+npm i f-array.splice
 ```
 
 ## Usage
