@@ -1,6 +1,6 @@
 {
   "name": "f-array.splice",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "F*** the `array.splice`",
   "type": "module",
   "exports": "./dist/main.js",
