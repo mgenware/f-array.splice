@@ -6,14 +6,18 @@ export function arrayRemoveAt<T>(array: T[], index: number) {
   array.splice(index, 1);
 }
 
-export function pureArrayInsertAt<T>(array: ReadonlyArray<T>, index: number, ...items: T[]): T[] {
+export function pureArrayInsertAt<T>(
+  array: readonly T[],
+  index: number,
+  ...items: T[]
+): readonly T[] {
   return [...array.slice(0, index), ...items, ...array.slice(index)];
 }
 
-export function pureArrayRemoveAt<T>(array: ReadonlyArray<T>, index: number): T[] {
+export function pureArrayRemoveAt<T>(array: readonly T[], index: number): readonly T[] {
   return [...array.slice(0, index), ...array.slice(index + 1)];
 }
 
-export function pureArraySet<T>(array: T[], index: number, item: T): T[] {
+export function pureArraySet<T>(array: readonly T[], index: number, item: T): readonly T[] {
   return [...array.slice(0, index), item, ...array.slice(index + 1)];
 }
